@@ -1,0 +1,1 @@
+Question "Does it live in the water?" (Question "Does it hop?" (Question "Is it a reptile?" (Answer "toad") (Answer "frog")) (Question "Is it a bird?" (Answer "penguin") (Answer "fish"))) (Question "Does it have stripes?" (Answer "Zebra") (Question "Does it have a shell?" (Answer "cow") (Answer "turtle")))
