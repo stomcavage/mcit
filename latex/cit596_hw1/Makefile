@@ -2,10 +2,16 @@
 
 all: hw1.pdf
 
-hw1.pdf: hw1.tex 1_4_e
+hw1.pdf: hw1.tex 1_4_e 1_4_f 1_4_g 1_5_c
 	pdflatex hw1.tex 
 
-1_4_e: 1_4_e_a.png 1_4_e_b.png 1_4_e.png
+1_4_e: 1_4_e_a.png 1_4_e_b.png 1_4_e.png 
+
+1_4_f: 1_4_f_a.png 1_4_f_b.png 1_4_f.png 
+
+1_4_g: 1_4_g_a.png 1_4_g_b.png 1_4_g.png 
+
+1_5_c: 1_5_c_a.png 1_5_c.png 
 
 .dot.png:
 	rm -f $@
@@ -14,3 +20,4 @@ hw1.pdf: hw1.tex 1_4_e
 clean:
 	rm -f *.aux
 	rm -f *.log
+	rm -f *.png

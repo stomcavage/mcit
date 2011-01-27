@@ -1,10 +1,11 @@
 digraph G {
 	rankdir=LR;
 	null [shape = plaintext label=""]
-	1 [shape=doublecircle];
+	1 [shape=circle];
 	2 [shape=doublecircle];
 	null -> 1
 	1 -> 1 [label = "a"];
 	1 -> 2 [label = "b"];
-	2 -> 2 [label = "a"];
+	2 -> 1 [label = "a"];
+	2 -> 2 [label = "b"];
 }
