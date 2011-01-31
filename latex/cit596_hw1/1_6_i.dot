@@ -1,0 +1,9 @@
+digraph G {
+	rankdir=LR;
+	null [shape = plaintext label=""]
+	q1 [shape=doublecircle];
+	q2 [shape=doublecircle];
+	null -> q1
+	q1 -> q2 [label = "1"];
+	q2 -> q1 [label = "0, 1"];
+}

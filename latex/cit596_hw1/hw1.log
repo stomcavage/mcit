@@ -1,4 +1,4 @@
-This is pdfeTeXk, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2010.8.25)  31 JAN 2011 09:20
+This is pdfeTeXk, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2010.8.25)  31 JAN 2011 14:50
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -151,8 +151,7 @@ Package: subfigure 2002/07/30 v2.1.4 subfigure package
 (/usr/share/texmf/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip53
 \subfig@bottom=\skip54
-)
-No file hw1.aux.
+) (./hw1.aux)
 \openout1 = `hw1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
@@ -167,6 +166,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
 LaTeX Font Info:    ... okay on input line 30.
+
 (/usr/share/texmf/tex/context/base/supp-pdf.tex
 (/usr/share/texmf/tex/context/base/supp-mis.tex
 loading : Context Support Macros / Miscellaneous (2004.10.26)
@@ -246,25 +246,50 @@ File: 1_5_c_a.png Graphic file (type png)
 File: 1_5_c.png Graphic file (type png)
  <use 1_5_c.png> [2 <./1_4_f_a.png> <./1_4_f_b.png> <./1_4_f.png> <./1_4_g_a.pn
 g> <./1_4_g_b.png> <./1_4_g.png>]
-[3 <./1_5_c_a.png> <./1_5_c.png>] [4] (./hw1.aux) ) 
+<1_6_c.png, id=49, 661.47125pt x 176.66pt>
+File: 1_6_c.png Graphic file (type png)
+ <use 1_6_c.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<1_6_e.png, id=50, 460.72125pt x 175.65625pt>
+File: 1_6_e.png Graphic file (type png)
+ <use 1_6_e.png> [3 <./1_5_c_a.png> <./1_5_c.png>] <1_6_g.png, id=60, 870.25125
+pt x 123.46124pt>
+File: 1_6_g.png Graphic file (type png)
+ <use 1_6_g.png>
+<1_6_i.png, id=61, 345.29pt x 77.28876pt>
+File: 1_6_i.png Graphic file (type png)
+ <use 1_6_i.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<1_6_j.png, id=62, 557.08125pt x 221.82875pt>
+File: 1_6_j.png Graphic file (type png)
+ <use 1_6_j.png>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <./1_6_c.png> <./1_6_e.png> <./1_6_g.png>] [5 <./1_6_i.png> <./1_6_j.png>]
+(./hw1.aux) ) 
 Here is how much of TeX's memory you used:
- 2078 strings out of 94500
- 24127 string characters out of 1176766
+ 2105 strings out of 94500
+ 24463 string characters out of 1176766
  72533 words of memory out of 1000000
- 5234 multiletter control sequences out of 10000+50000
+ 5254 multiletter control sequences out of 10000+50000
  11557 words of font info for 45 fonts, out of 500000 for 2000
  580 hyphenation exceptions out of 1000
  27i,7n,24p,219b,246s stack positions out of 1500i,500n,5000p,200000b,5000s
 PDF statistics:
- 57 PDF objects out of 300000
+ 68 PDF objects out of 300000
  0 named destinations out of 131072
- 56 words of extra memory for PDF output out of 65536
-</usr/share/texmf/fonts/type
-1/bluesky/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsl10.pfb></us
-r/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/bl
-uesky/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/shar
-e/texmf/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/bluesky
-/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/t
-exmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm
-/cmr12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb>
-Output written on hw1.pdf (4 pages, 154054 bytes).
+ 81 words of extra memory for PDF output out of 65536
+</usr/share/texmf/fonts/type1/bluesky/cm/cmex10.pfb></usr/share/te
+xmf/fonts/type1/bluesky/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/c
+msl10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/
+fonts/type1/bluesky/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.
+pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf/fonts
+/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb
+></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/ty
+pe1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb>
+Output written on hw1.pdf (5 pages, 216982 bytes).
