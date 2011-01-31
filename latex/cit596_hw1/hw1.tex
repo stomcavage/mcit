@@ -19,6 +19,7 @@
 \newcommand{\union}{\bigcup}
 \newcommand{\intersect}{\bigcap}
 \newcommand{\where}{\mid}
+\newcommand{\inverse}{\overline}
 
 \title{CIT 596 Homework 1}
 \author{Steven Tomcavage\\stomcava@seas.upenn.edu}
@@ -34,20 +35,20 @@
 
 \subsection{Exercise 1.4 e}
 
-Create a DFA that accepts the language $\{\omega \where \omega \text{ starts
-with an a and has at most one b}\}$.
+Create a DFA that accepts the language $\{ \omega \where \omega \text{ starts
+with an } a \text{ and has at most one } b \}$.
 
 \begin{figure}[h!]
 	\centering
-	\subfigure[A accepts $\{\omega \where \omega \text{ starts with an a}\}$] 
+	\subfigure[$A$ accepts $\{\omega \where \omega \text{ starts with an } a \}$] 
 	{
 		\includegraphics[height=1.0in]{1_4_e_a.png}
 	}
-	\subfigure[B accepts $\{\omega \where \omega \text{ has at most one b}\}$] 
+	\subfigure[$B$ accepts $\{\omega \where \omega \text{ has at most one } b \}$] 
 	{
 		\includegraphics[height=1.0in]{1_4_e_b.png}
 	}
-	\subfigure[DFA that accepts AB] 
+	\subfigure[DFA that accepts $AB$] 
 	{
 		\includegraphics[height=1.0in]{1_4_e.png}
 	}
@@ -58,20 +59,20 @@ with an a and has at most one b}\}$.
 
 \subsection{Exercise 1.4 f}
 
-Create a DFA that accepts the language $\{\omega \where \omega \text{ has
-an odd number of `a's and ends with a b}\}$.
+Create a DFA that accepts the language $\{ \omega \where \omega \text{ has
+an odd number of } a \text{ and ends with a } b \}$.
 
 \begin{figure}[h!]
 	\centering
-	\subfigure[A accepts $\{\omega \where \omega \text{ has an odd number of
-	`a's}\}$] {
+	\subfigure[$A$ accepts $\{\omega \where \omega \text{ has an odd number of }
+	a \}$] {
 		\includegraphics[height=1.0in]{1_4_f_a.png}
 	}
-	\subfigure[B accepts $\{\omega \where \omega \text{ ends with a b}\}$] 
+	\subfigure[$B$ accepts $\{\omega \where \omega \text{ ends with a } b \}$] 
 	{
 		\includegraphics[height=1.0in]{1_4_f_b.png}
 	}
-	\subfigure[DFA that accepts AB] 
+	\subfigure[DFA that accepts $AB$] 
 	{
 		\includegraphics[height=2.0in]{1_4_f.png}
 	}
@@ -81,18 +82,18 @@ an odd number of `a's and ends with a b}\}$.
 \subsection{Exercise 1.4 g}
 
 Create a DFA that accepts the language $\{\omega \where \omega \text{ has
-an even length and an odd number of `a's}\}$.
+an even length and an odd number of } a \}$.
 
 \begin{figure}[h!]
 	\centering
-	\subfigure[A accepts $\{\omega \where \omega \text{ has an even length}\}$] {
+	\subfigure[$A$ accepts $\{\omega \where \omega \text{ has an even length}\}$] {
 		\includegraphics[height=0.75in]{1_4_g_a.png}
 	}
-	\subfigure[B accepts $\{\omega \where \omega \text{ has an odd number of
-	`a's}\}$] {
+	\subfigure[$B$ accepts $\{\omega \where \omega \text{ has an odd number of }
+	a \}$] {
 		\includegraphics[height=1.0in]{1_4_g_b.png}
 	}
-	\subfigure[DFA that accepts AB] 
+	\subfigure[DFA that accepts $AB$] 
 	{
 		\includegraphics[height=1.0in]{1_4_g.png}
 	}
@@ -103,15 +104,16 @@ an even length and an odd number of `a's}\}$.
 
 \subsection{Exercise 1.5 c}
 
-Create a DFA that accepts the language $\{\omega \where \omega \text{ does
-not contain ab nor ba}\}$.
+Create a DFA that accepts the language $\{ \omega \where \omega \text{ does
+not contain } ab \text{ nor } ba \}$.
 
 \begin{figure}[h!]
 	\centering
-	\subfigure[A accepts $\{\omega \where \omega \text{ contains ab or ba}\}$] {
+	\subfigure[$A$ accepts $\{\omega \where \omega \text{ contains } ab \text{ and
+	} ba \}$] {
 		\includegraphics[height=2.0in]{1_5_c_a.png}
 	}
-	\subfigure[DFA that accepts $\not{A}$] 
+	\subfigure[DFA that accepts $\inverse{A}$] 
 	{
 		\includegraphics[height=2.0in]{1_5_c.png}
 	}
@@ -119,6 +121,11 @@ not contain ab nor ba}\}$.
 \end{figure}
 
 \subsection{Exercise 1.5 e}
+
+Create a DFA that accepts the language $\{ \omega \where \omega \text{ is
+any string in } (ab^\star)^\star \}$.
+
+TODO
 
 \subsection{Exercise 1.5 f}
 
