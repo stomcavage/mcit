@@ -60,12 +60,12 @@ with an } a \text{ and has at most one } b \}$.
 \subsection{Exercise 1.4 f}
 
 Create a DFA that accepts the language $\{ \omega \where \omega \text{ has
-an odd number of } a \text{ and ends with a } b \}$.
+an odd number of } a \text{'s and ends with a } b \}$.
 
 \begin{figure}[h!]
 	\centering
 	\subfigure[$A$ accepts $\{\omega \where \omega \text{ has an odd number of }
-	a \}$] {
+	a \text{'s}\}$] {
 		\includegraphics[height=1.0in]{1_4_f_a.png}
 	}
 	\subfigure[$B$ accepts $\{\omega \where \omega \text{ ends with a } b \}$] 
@@ -82,7 +82,7 @@ an odd number of } a \text{ and ends with a } b \}$.
 \subsection{Exercise 1.4 g}
 
 Create a DFA that accepts the language $\{\omega \where \omega \text{ has
-an even length and an odd number of } a \}$.
+an even length and an odd number of } a \text{'s}\}$.
 
 \begin{figure}[h!]
 	\centering
@@ -90,7 +90,7 @@ an even length and an odd number of } a \}$.
 		\includegraphics[height=0.75in]{1_4_g_a.png}
 	}
 	\subfigure[$B$ accepts $\{\omega \where \omega \text{ has an odd number of }
-	a \}$] {
+	a \text{'s}\}$] {
 		\includegraphics[height=1.0in]{1_4_g_b.png}
 	}
 	\subfigure[DFA that accepts $AB$] 
@@ -104,8 +104,8 @@ an even length and an odd number of } a \}$.
 
 \subsection{Exercise 1.5 c}
 
-Create a DFA that accepts the language $\{ \omega \where \omega \text{ does
-not contain } ab \text{ nor } ba \}$.
+Create a DFA that accepts the language $\{ \omega \where \omega \text{
+conains neither the substrings } ab \text{ nor } ba \}$.
 
 \begin{figure}[h!]
 	\centering
@@ -120,19 +120,45 @@ not contain } ab \text{ nor } ba \}$.
 	\caption{DFA for Exercise 1.5c}
 \end{figure}
 
+\newpage
+
 \subsection{Exercise 1.5 e}
 
 Create a DFA that accepts the language $\{ \omega \where \omega \text{ is
 any string not in } (ab^\star)^\star \}$.
 
-TODO
+\begin{figure}[h!]
+	\centering
+	\subfigure[$A$ accepts $\{\omega \where \omega \text{ is in } (ab^\star)^\star
+	\}$] {
+		\includegraphics[height=1.0in]{1_5_e_a.png}
+	}
+	\subfigure[DFA that accepts $\inverse{A}$] 
+	{
+		\includegraphics[height=2.0in]{1_5_e.png}
+	}
+	\caption{DFA for Exercise 1.5e}
+\end{figure}
 
 \subsection{Exercise 1.5 f}
 
 Create a DFA that accepts the language $\{ \omega \where \omega \text{ is
 any string not in } a^\star \union b^\star \}$.
 
-TODO
+\begin{figure}[h!]
+	\centering
+	\subfigure[$A$ accepts $\{\omega \where \omega \text{ is in } a^\star \union
+	b^\star \}$] {
+		\includegraphics[height=2.0in]{1_5_f_a.png}
+	}
+	\subfigure[DFA that accepts $\inverse{A}$] 
+	{
+		\includegraphics[height=2.0in]{1_5_f.png}
+	}
+	\caption{DFA for Exercise 1.5f}
+\end{figure}
+
+\newpage
 
 \section{Exercise 1.6}
 
@@ -167,13 +193,15 @@ Create a DFA that accepts the language $\{ \omega \where \text{the length of }
 	\caption{DFA for Exercise 1.6g}
 \end{figure}
 
+\newpage
+
 \subsection{Exercise 1.6 i}
 
 Create a DFA that accepts the language $\{ \omega \where \text{every odd
-position of } \omega \text{ is } 1 \}$.
+position of } \omega \text{ is a } 1 \}$.
 
 \begin{figure}[h!]
-	\includegraphics[height=1.0in]{1_6_i.png}
+	\includegraphics[height=0.75in]{1_6_i.png}
 	\caption{DFA for Exercise 1.6i}
 \end{figure}
 
@@ -189,6 +217,10 @@ least two 0s and at most one 1} \}$.
 
 \section{}
 
+TODO
+
 \section{}
+
+TODO
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfeTeXk, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2010.8.25)  31 JAN 2011 14:50
+This is pdfeTeXk, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2010.8.25)  1 FEB 2011 21:24
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -246,50 +246,56 @@ File: 1_5_c_a.png Graphic file (type png)
 File: 1_5_c.png Graphic file (type png)
  <use 1_5_c.png> [2 <./1_4_f_a.png> <./1_4_f_b.png> <./1_4_f.png> <./1_4_g_a.pn
 g> <./1_4_g_b.png> <./1_4_g.png>]
-<1_6_c.png, id=49, 661.47125pt x 176.66pt>
+[3 <./1_5_c_a.png> <./1_5_c.png>]
+<1_5_e_a.png, id=52, 310.15875pt x 115.43124pt>
+File: 1_5_e_a.png Graphic file (type png)
+ <use 1_5_e_a.png>
+<1_5_e.png, id=53, 300.12125pt x 232.87pt>
+File: 1_5_e.png Graphic file (type png)
+ <use 1_5_e.png>
+<1_5_f_a.png, id=54, 310.15875pt x 243.91125pt>
+File: 1_5_f_a.png Graphic file (type png)
+ <use 1_5_f_a.png>
+<1_5_f.png, id=55, 406.51875pt x 243.91125pt>
+File: 1_5_f.png Graphic file (type png)
+ <use 1_5_f.png> [4 <./1_5_e_a.png> <./1_5_e.png> <./1_5_f_a.png> <./1_5_f.png>
+]
+<1_6_c.png, id=71, 661.47125pt x 176.66pt>
 File: 1_6_c.png Graphic file (type png)
  <use 1_6_c.png>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<1_6_e.png, id=50, 460.72125pt x 175.65625pt>
+<1_6_e.png, id=72, 460.72125pt x 175.65625pt>
 File: 1_6_e.png Graphic file (type png)
- <use 1_6_e.png> [3 <./1_5_c_a.png> <./1_5_c.png>] <1_6_g.png, id=60, 870.25125
-pt x 123.46124pt>
+ <use 1_6_e.png>
+<1_6_g.png, id=73, 870.25125pt x 123.46124pt>
 File: 1_6_g.png Graphic file (type png)
- <use 1_6_g.png>
-<1_6_i.png, id=61, 345.29pt x 77.28876pt>
+ <use 1_6_g.png> [5 <./1_6_c.png> <./1_6_e.png> <./1_6_g.png>] <1_6_i.png, id=7
+7, 345.29pt x 77.28876pt>
 File: 1_6_i.png Graphic file (type png)
- <use 1_6_i.png>
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<1_6_j.png, id=62, 557.08125pt x 221.82875pt>
+<use 1_6_i.png> <1_6_j.png, id=78, 557.08125pt x 221.82875pt>
 File: 1_6_j.png Graphic file (type png)
  <use 1_6_j.png>
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4 <./1_6_c.png> <./1_6_e.png> <./1_6_g.png>] [5 <./1_6_i.png> <./1_6_j.png>]
-(./hw1.aux) ) 
+[6 <./1_6_i.png> <./1_6_j.png>] (./hw1.aux) ) 
 Here is how much of TeX's memory you used:
- 2105 strings out of 94500
- 24463 string characters out of 1176766
+ 2125 strings out of 94500
+ 24739 string characters out of 1176766
  72533 words of memory out of 1000000
- 5254 multiletter control sequences out of 10000+50000
+ 5270 multiletter control sequences out of 10000+50000
  11557 words of font info for 45 fonts, out of 500000 for 2000
  580 hyphenation exceptions out of 1000
  27i,7n,24p,219b,246s stack positions out of 1500i,500n,5000p,200000b,5000s
 PDF statistics:
- 68 PDF objects out of 300000
+ 81 PDF objects out of 300000
  0 named destinations out of 131072
- 81 words of extra memory for PDF output out of 65536
-</usr/share/texmf/fonts/type1/bluesky/cm/cmex10.pfb></usr/share/te
-xmf/fonts/type1/bluesky/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/c
-msl10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/
-fonts/type1/bluesky/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.
-pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf/fonts
-/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb
-></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/ty
-pe1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb>
-Output written on hw1.pdf (5 pages, 216982 bytes).
+ 101 words of extra memory for PDF output out of 65536
+</usr/share/texmf/fonts/type1/publ
+ic/tt2001/fmex8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmex10.pfb></usr/s
+hare/texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/share/texmf/fonts/type1/blues
+ky/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsl10.pfb></usr/share
+/texmf/fonts/type1/bluesky/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/bluesky/c
+m/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf
+/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cms
+y10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fo
+nts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.
+pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb>
+Output written on hw1.pdf (6 pages, 260663 bytes).
