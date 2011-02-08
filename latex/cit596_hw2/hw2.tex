@@ -84,11 +84,11 @@ $11011101$.
 
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{ l || c | c }
+	\begin{tabular}{ r || r | r }
 	Input & Output from Table \ref{table_1a} & Output from Table \ref{table_1b} \\
 	\hline      
-	$10001$    & $$                          & $$ \\
-	$11011101$ & $$                          & $$ \\
+	$10001$    & $11110$                    & $10001$ \\
+	$11011101$ & $10000000$                 & $11011101$ \\
 	\end{tabular}
 	\caption{Output for problem 2.}
 	\label{table_3}
@@ -96,6 +96,31 @@ $11011101$.
 
 \section{}
 
+Construct the state diagram for the Moore machine with the given state table
+(omitted). I am assuming the start state is S0. 
+
+\begin{figure}[h!]
+	\includegraphics[height=2.0in]{3.png}
+	\caption{State diagram for Question 3}
+\end{figure}
+
 \section{}
+
+For the Moore machine in question 3, find the output for the given input
+strings. I am assuming the start state is S0.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{ r || r | r }
+	Input & Output \\
+	\hline      
+	$0101$        & $00111$ \\
+	$111111$      & $0110110$ \\
+	$11101110111$ & $011001100110$ \\
+	$1010111$     & $01111011$ \\
+	\end{tabular}
+	\caption{Output for problem 4.}
+	\label{table_3}
+\end{table}
 
 \end{document}

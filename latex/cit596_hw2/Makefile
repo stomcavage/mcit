@@ -2,7 +2,7 @@
 
 all: hw2.pdf
 
-hw2.pdf: hw2.tex 
+hw2.pdf: hw2.tex 3.png
 	pdflatex hw2.tex 
 	pdflatex hw2.tex 
 
