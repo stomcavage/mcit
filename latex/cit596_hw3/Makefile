@@ -10,7 +10,7 @@ hw2.pdf: hw3.tex 1_13 1_16.png 1_17 1_19.png 1_21 1_28.png
 
 1_17: 1_17_a.png 1_17_b.png
 
-1_21: 1_21_a.png
+1_21: 1_21_a.png 1_21_b.png 1_21_c.png 1_21_d.png 1_21_e.png
 
 .dot.png:
 	rm -f $@

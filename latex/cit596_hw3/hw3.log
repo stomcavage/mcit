@@ -1,4 +1,4 @@
-This is pdfeTeXk, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2010.8.25)  16 FEB 2011 22:35
+This is pdfeTeXk, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2010.8.25)  17 FEB 2011 16:38
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -237,35 +237,52 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <1_21_a.png, id=35, 436.63126pt x 151.56625pt>
 File: 1_21_a.png Graphic file (type png)
  <use 1_21_a.png>
+<1_21_b.png, id=36, 639.38875pt x 176.66pt>
+File: 1_21_b.png Graphic file (type png)
+ <use 1_21_b.png>
+<1_21_c.png, id=37, 583.17876pt x 151.56625pt>
+File: 1_21_c.png Graphic file (type png)
+ <use 1_21_c.png>
+<1_21_d.png, id=38, 546.04pt x 119.44624pt>
+File: 1_21_d.png Graphic file (type png)
+ <use 1_21_d.png>
+<1_21_e.png, id=39, 666.49pt x 69.25874pt>
+File: 1_21_e.png Graphic file (type png)
+ <use 1_21_e.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<1_28.png, id=36, 513.92pt x 176.66pt>
+<1_28.png, id=40, 513.92pt x 176.66pt>
 File: 1_28.png Graphic file (type png)
  <use 1_28.png>
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2 <./1_17_a.png> <./1_17_b.png>] [3 <./1_19.png> <./1_21_a.png> <./1_28.png>]
-[4] (./hw3.aux) ) 
+[2 <./1_17_a.png> <./1_17_b.png>]
+Overfull \vbox (1.99355pt too high) has occurred while \output is active []
+
+
+[3 <./1_19.png> <./1_21_a.png> <./1_21_b.png> <./1_21_c.png> <./1_21_d.png> <./
+1_21_e.png>] [4 <./1_28.png>] [5] (./hw3.aux) ) 
 Here is how much of TeX's memory you used:
- 2064 strings out of 94500
- 23876 string characters out of 1176766
- 72534 words of memory out of 1000000
- 5221 multiletter control sequences out of 10000+50000
+ 2084 strings out of 94500
+ 24152 string characters out of 1176766
+ 73534 words of memory out of 1000000
+ 5237 multiletter control sequences out of 10000+50000
  11250 words of font info for 44 fonts, out of 500000 for 2000
  580 hyphenation exceptions out of 1000
  27i,7n,24p,219b,246s stack positions out of 1500i,500n,5000p,200000b,5000s
 PDF statistics:
- 57 PDF objects out of 300000
+ 64 PDF objects out of 300000
  0 named destinations out of 131072
- 41 words of extra memory for PDF output out of 65536
-</usr/share/texmf/fonts/type1/bluesky/cm/cmr7.pfb></usr/share/
-texmf/fonts/type1/bluesky/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/bluesky/cm
-/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsl10.pfb></usr/share/tex
-mf/fonts/type1/bluesky/cm/cmmi8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cm
-r8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/share/texmf/fo
-nts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.
-pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/share/texmf/fonts
-/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr17.pfb>
-Output written on hw3.pdf (4 pages, 209471 bytes).
+ 61 words of extra memory for PDF output out of 65536
+</usr/share/texmf/fonts/type1/bl
+uesky/cm/cmr7.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi7.pfb></usr/shar
+e/texmf/fonts/type1/bluesky/cm/cmex10.pfb></usr/share/texmf/fonts/type1/bluesky
+/cm/cmsl10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi8.pfb></usr/share/t
+exmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/type1/bluesky/cm/c
+msy10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi10.pfb></usr/share/texmf
+/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmbx
+12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/fon
+ts/type1/bluesky/cm/cmr17.pfb>
+Output written on hw3.pdf (5 pages, 252480 bytes).

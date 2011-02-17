@@ -1,0 +1,12 @@
+digraph G {
+	rankdir=LR;
+	null [shape = plaintext label=""]
+	0 [shape=circle];
+	1 [shape=circle];
+	4 [shape=doublecircle];
+	null -> 0
+	0 -> 1 [label = "&#949;"];
+	1 -> 4 [label = "&#949;"];
+	1 -> 1 [label = "((a + b)a*b)(ba*b)*a"];
+	1 -> 4 [label = "((a + b)a*b)(ba*b)*"];
+}
