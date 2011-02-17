@@ -1,19 +1,24 @@
 digraph G {
 	rankdir=LR;
 	null [shape = plaintext label=""]
-	1 [shape=doublecircle];
-	2 [shape=circle];
-	3 [shape=circle];
-	4 [shape=circle];
-	5 [shape=circle];
-	6 [shape=circle];
+	1   [shape=doublecircle];
+	2   [shape=circle];
+	3   [shape=circle];
+	23  [shape=circle label="2, 3"];
+	41  [shape=doublecircle label="4, 1"];
+	51  [shape=doublecircle label="5, 1"];
+	126 [shape=doublecircle label="1, 2, 6"];
+	145 [shape=doublecircle label="1, 4, 5"];
 	null -> 1
 	1 -> 2 [label = "0"];
 	2 -> 3 [label = "0"];
-	3 -> 4 [label = "1"];
-	4 -> 1 [label = "&#949;"];
-	2 -> 5 [label = "1"];
-	5 -> 1 [label = "&#949;"];
-	5 -> 6 [label = "0"];
-	6 -> 1 [label = "&#949;"];
+	2 -> 51 [label = "1"];
+	3 -> 41 [label = "1"];
+	41 -> 2 [label = "0"];
+	51 -> 126 [label = "0"]
+	126 -> 51 [label = "1"]
+	126 -> 23 [label = "0"]
+	23 -> 3 [label = "0"]
+	23 -> 145 [label = "1"]
+	145 -> 126 [label = "0"]
 }

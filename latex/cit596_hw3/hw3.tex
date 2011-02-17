@@ -73,7 +73,11 @@ Give an NFA recognizing the language $(01 \union 001 \union 010)^\star$.
 
 Convert the NFA from Exercise 1.17a to an equivalent DFA.
 
-TODO
+\begin{figure}[h!]
+	\centering
+	\includegraphics[height=1.5in]{1_17_b.png}
+	\caption{DFA for Exercise 1.17b}
+\end{figure}
 
 \section{Exercise 1.19b}
 
@@ -90,6 +94,14 @@ Convert the following regular expression to an NFA: $(((00)^\star (11)) \union
 
 Convert the following NFA to a regular expression.
 
+\begin{figure}[h!]
+	\centering
+	\subfigure[The original NFA.] {
+		\includegraphics[height=1.5in]{1_21_a.png}
+	}
+	\caption{DFA for Exercise 1.21b}
+\end{figure}
+
 TODO
 
 \section{Exercise 1.28c}
@@ -103,13 +115,60 @@ $\Sigma = \{a, b\}$.
 	\caption{DFA for Exercise 1.28c}
 \end{figure}
 
-\section{Exercies 1.29b}
+\section{Exercie 1.29b}
 
 Use the pumping lemma to show that the language $A_2 = \{ \omega \omega \omega
 \where \omega \in \{a, b\}^\star \}$ is not regular.
 
+Assume that $A_2$ is regular. Let $p$ be the pumping length of $A_2$. Let
+$\omega = ab^pa$. So the string $ab^paab^paab^pa$ is in the language $A_2$.
+Pumping $b^p$ gives $ab^pb^paab^paab^pa$, which is not in the language. Thus,
+$A_2$ is not regular.
+
+\section{Exercie 1.32}
+
+Show that the language $B$ (omitted) is regular.
+
+Let $w_1$ be the top row, $w_2$ be the second row, and $w_3$ be the bottom row.
+Assume that the language is regular, which means that it can be pumped. Let
+$p$ be the pumping length. Let $w = xy^pz$. If $B$ is regular, then $xy^py^pz$
+is also in $B$.
+
+Repeating binary sums requires examination of three cases: $0 + 0 = 0$, $0 + 1
+= 1$, and $1 + 1 = 0$. Neither $0 + 0 = 0$ nor $0 + 1 = 1$ create carry-overs,
+so repeating them does not affect any position to the left of those sums.
+However, repeating $1 + 1 = 0$ does cause a carry-over that needs to be
+considered.
+
 TODO
 
+\section{Exercise 1.51}
+
+TODO
+
+\section{Exercise 1.53}
+
+Let $\Sigma = \{0, 1, +, =\}$ and $ADD = \{ x=y+z \where x, y, z \text{ are
+binary integers and } x { is the sum of } y { and } z\}$. Show that the language
+$ADD$ is not regular.
+
+Assume that $ADD$ is regular, which means it can be pumped. Let $p$ be the
+pumping length of $ADD$. Let $x=y^p + z$ be in the language $ADD$. Pumping $y$
+gives $x = y^p y^p + z$ which no longer satisfies the condition that $y$ and $z$
+sum to $x$. Therefore, $ADD$ cannot be pumped and is not regular.
+
+\section{Exercise 1.55c}
+
+What is the minimum pumping length for $001 \union 0^\star1^\star$?
+
+The minimum pumping length is 2 because at that length, either a 0 or a 1
+in the second position could be pumped. 
+
+\section{Exercise 1.55h}
+
+What is the minimum pumping length for $10(11^\star0)^\star0$?
+
+The minimum pumping length is 5, where the string 10100 can be divided as $x
+= 10, y = 1, z = 00$.
 
 \end{document}
-
