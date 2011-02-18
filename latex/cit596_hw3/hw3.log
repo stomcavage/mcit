@@ -1,4 +1,4 @@
-This is pdfeTeXk, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2010.8.25)  17 FEB 2011 16:56
+This is pdfeTeXk, Version 3.141592-1.21a-2.2 (Web2C 7.5.4) (format=pdflatex 2010.8.25)  18 FEB 2011 14:27
 entering extended mode
  file:line:error style messages enabled.
  %&-line parsing enabled.
@@ -210,10 +210,10 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 32.
 (/usr/share/texmf/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )
-<1_13_a.png, id=1, 513.92pt x 115.43124pt>
+<1_13_a.png, id=1, 532.99126pt x 115.43124pt>
 File: 1_13_a.png Graphic file (type png)
  <use 1_13_a.png>
-<1_13_b.png, id=2, 534.99875pt x 115.43124pt>
+<1_13_b.png, id=2, 554.07pt x 115.43124pt>
 File: 1_13_b.png Graphic file (type png)
  <use 1_13_b.png>
 <1_16.png, id=3, 751.80875pt x 244.915pt>
@@ -272,4 +272,4 @@ ky/cm/cmsl10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi8.pfb></usr/share
 mf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cm
 bx12.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmr12.pfb></usr/share/texmf/f
 onts/type1/bluesky/cm/cmr17.pfb>
-Output written on hw3.pdf (5 pages, 244735 bytes).
+Output written on hw3.pdf (5 pages, 242946 bytes).
