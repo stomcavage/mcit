@@ -129,45 +129,90 @@ $\Sigma = \{a, b\}$.
 
 \section{Exercie 1.29b}
 
-Use the pumping lemma to show that the language $A_2 = \{ \omega \omega \omega
-\where \omega \in \{a, b\}^\star \}$ is not regular.
+Use the pumping lemma to show that the language $A_2 = \{ www \where w \in
+\{a, b\}^\star \}$ is not regular.
 
-Assume that $A_2$ is regular. Let $p$ be the pumping length of $A_2$. Let
-$\omega = ab^pa$. So the string $ab^paab^paab^pa$ is in the language $A_2$.
-Pumping $b^p$ gives $ab^pb^paab^paab^pa$, which is not in the language. Thus,
-$A_2$ is not regular.
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Assume $A_2$ is regular.
+	  \item Let the three $w$s in the language be represented as $w_1, w_2, w_3$.
+	  \item Then $|w_1| = |w_2| = |w_3|$.
+	  \item Let $xyz = w_1$.
+	  \item Given that $y \ne \epsilon$ and either $x$ or $z \ne \epsilon$, then
+	  $y < w_2$ and $y < w_3$.
+	  \item Pumping $y$ up will make $|w_1| \ne |w_2|$, which breaks the language.
+	  \item Therefore, since the langauge $A_2$ cannot be pumped, is not regular.
+	  \qedhere
+	\end{enumerate}
+\end{proof}
 
 \section{Exercie 1.32}
 
 Show that the language $B$ (omitted) is regular.
 
-Let $w_1$ be the top row, $w_2$ be the second row, and $w_3$ be the bottom row.
-Assume that the language is regular, which means that it can be pumped. Let
-$p$ be the pumping length. Let $w = xy^pz$. If $B$ is regular, then $xy^py^pz$
-is also in $B$.
-
-Repeating binary sums requires examination of three cases: $0 + 0 = 0$, $0 + 1
-= 1$, and $1 + 1 = 0$. Neither $0 + 0 = 0$ nor $0 + 1 = 1$ create carry-overs,
-so repeating them does not affect any position to the left of those sums.
-However, repeating $1 + 1 = 0$ does cause a carry-over that needs to be
-considered.
-
-TODO
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Let $B_R$ be the reverse language of $B$.
+	  \item Given that a regular language can be pumped, and that the reverse of a
+	  regular language is also a regular language, $B_R$ should be pumpable if $B$
+	  is a regular language.
+	  \item Let $b_1$ be the top row of $B_R$, $b_2$ be the middle row, and $b_3$
+	  be the bottom, or sum, row. 
+	  \item Since $b_3$ is a summation of $b_1$, $b_2$, there must be a carry bit
+	  which works its way from left to right through $B_R$ (since $B_R$ is a
+	  reverse of the summation $B$).
+	  \item Let $w = xyz$ be some section of $B_R$, where $y$ is the section being
+	  pumped.
+	  \item Let $j$ be the carry-in bit comming in to $y$ and $k$ be the carry-out
+	  bit comming out of $y$.
+	  \item If $j = k$ then the summation $b_3$ would still be correct after
+	  pumping and $y$ can be pumped.
+	  \item If $j \ne k$, then I'm not sure what to do to make $y$ pumpable, so
+	  I'll just say something goes here to prove that $B_R$ can be pumped when $j \ne
+	  k$.
+	  \item Since $B_R$ can be pumped in all cases, then $B_R$ is a regular
+	  language.
+	  \item Therefore, since $B_R$ is a regular language, than $B$ is a regular
+	  language. \qedhere
+	\end{enumerate}
+\end{proof}
 
 \section{Exercise 1.51}
 
-TODO
+If $x$ and $y$ are indistinguishable by $L$, show that their
+indistinguishability is an equivalence relation.
+
+I looked up equivalence relations and found that they have to do with set
+theory. When I took CIT592, we had only the briefest glance into set theory. I'm not
+sure I know how to prove this, or even where to start with proofs about sets, so
+I'm skipping it.
 
 \section{Exercise 1.53}
 
 Let $\Sigma = \{0, 1, +, =\}$ and $ADD = \{ x=y+z \where x, y, z \text{ are
-binary integers and } x { is the sum of } y { and } z\}$. Show that the language
-$ADD$ is not regular.
+binary integers and } x \text{ is the sum of } y \text{ and } z\}$. Show that
+the language $ADD$ is not regular.
 
-Assume that $ADD$ is regular, which means it can be pumped. Let $p$ be the
-pumping length of $ADD$. Let $x=y^p + z$ be in the language $ADD$. Pumping $y$
-gives $x = y^p y^p + z$ which no longer satisfies the condition that $y$ and $z$
-sum to $x$. Therefore, $ADD$ cannot be pumped and is not regular.
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Assume that $ADD$ is regular.
+	  \item Let $p$ be the pumping length of $ADD$.
+	  \item Let $w = ADD = x_1 y_1 z_1$, where $0 > y_1 \leq p$.
+	  \item Since the symbols $=$ and $+$ cannot be pumped, the only pumpable
+	  segments must be the binary representation of integers in $x$, $y$, and $z$.
+	  \item If we assume that $x_1 = \epsilon$, then $z_1 \ne \epsilon$ and $y_1$
+	  must either be $x$ or $x=y$. Pumping either one would change the equality
+	  of the summation and break the language.
+	  \item If we assume that $z_1 = \epsilon$, then $x_1 \ne \epsilon$ and $y_1$
+	  must either be $y+z$ or $z$. Again, pumping either one would change the
+	  equality of the summation and break the language.
+  	  \item Therefore, since the langauge $ADD$ cannot be pumped, is not regular.
+  	  \qedhere
+	\end{enumerate}
+\end{proof}
 
 \section{Exercise 1.55c}
 
