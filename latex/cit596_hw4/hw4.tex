@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\usepackage{amsmath,amssymb,amsthm,graphicx,subfigure}
+\usepackage{amsmath,amssymb,amsthm,graphicx,subfigure,qtree}
 
 \pagestyle{myheadings}
 
@@ -33,7 +33,22 @@
 
 \section{Exercise 2.1}
 
-TODO
+\subsection{Part a}
+
+\Tree [.E [.T [.F [.a ] ] ] ]
+
+\subsection{Part b}
+
+\Tree [.E [ [.E [.T [.F [.a ] ] ] ] [ + ] [.T [.F [.a ] ] ] ] ]
+
+\subsection{Part c}
+
+\Tree [.E [ [.E [ [.E [.T [.F [.a ] ] ] ] [ + ] [.T [.F [.a ] ] ] ] ] [ + ] [.T [.F [.a ] ] ] ] ]
+
+\subsection{Part d}
+
+\Tree [.E [.T [.F [ ( ] [.E [.T [.F [ ( ] [.E [.T [.F [.a ] ] ] ] [ ) ] ] ] ] [
+) ] ] ] ]
 
 \section{Exercise 2.2}
 
@@ -44,21 +59,30 @@ TODO
 Given $\Sigma = \{0, 1\}$, give a CFG that generates the language $\{ w \where
 w \text{ starts and ends with the same symbol} \}$.
 
-TODO
+\begin{align*}
+	&S \rightarrow 0A0 \mid 1A1\\
+	&A \rightarrow 0 \mid 1 \mid A \mid \epsilon
+\end{align*}
 
 \section{Exercise 2.4c}
 
 Given $\Sigma = \{0, 1\}$, give a CFG that generates the language $\{ w \where
 w \text{ the length of } w \text{ is odd} \}$.
 
-TODO
+\begin{align*}
+	&S \rightarrow 0A \mid 1A\\
+	&A \rightarrow 00 \mid 01 \mid 10 \mid 11 \mid A \mid \epsilon
+\end{align*}
 
 \section{Exercise 2.4e}
 
 Given $\Sigma = \{0, 1\}$, give a CFG that generates the language $\{ w \where
 w = w^R \text{, that is} w \text{is a palindrome} \}$.
 
-TODO
+\begin{align*}
+	&S \rightarrow 0A0 \mid 1A1 \mid \epsilon\\
+	&A \rightarrow S
+\end{align*}
 
 \section{Exercise 2.5b}
 
@@ -90,18 +114,69 @@ TODO
 
 \section{Exercise 2.13}
 
+\subsection{Part a}
+
+$L(G)$ generates a string of zeros with one or two hash marks in the string.
+If there are two hash marks in the string, the hash marks can be at the
+beginning, end, or anywhere in the middle. If there is only one hash mark, the
+number of zeros after the hash mark is twice the number of zeros before the hash mark.
+
+\subsection{Part b}
+
 TODO
 
 \section{Exercise 2.14}
 
-TODO
+Convert the following CFG to Chomsky Normal Form:
+
+\begin{align*}
+	& A \rightarrow BAB \mid B \mid \epsilon\\
+	& B \rightarrow 00 \mid \epsilon
+\end{align*}
+
+\subsection*{Step 1}
+	Add a new start variable
+	\begin{align*}
+		& S \rightarrow A\\
+		& A \rightarrow BAB \mid B \mid \epsilon\\
+		& B \rightarrow 00 \mid \epsilon
+	\end{align*}
+\subsection*{Step 2}
+	Eliminate $B \rightarrow \epsilon$
+	\begin{align*}
+		& S \rightarrow A\\
+		& A \rightarrow BAB \mid B \mid \epsilon \mid BA \mid AB\\
+		& B \rightarrow 00 
+	\end{align*}
+\subsection*{Step 3}
+  Eliminate $A \rightarrow \epsilon$
+	\begin{align*}
+		& S \rightarrow A \mid \epsilon\\
+		& A \rightarrow BAB \mid B \mid BA \mid AB \mid BB\\
+		& B \rightarrow 00 
+	\end{align*}
+\subsection*{Step 4}
+  Remove unit rules
+	\begin{align*}
+		& S \rightarrow BAB \mid 00 \mid BA \mid AB \mid BB \mid \epsilon \\
+		& A \rightarrow BAB \mid 00 \mid BA \mid AB \mid BB\\
+		& B \rightarrow 00 
+	\end{align*}
 
 \section{Exercise 2.20}
 
 Let $A/B = \{ w | wx \in A \text{ for some } x \text{ in } B$. Show that, if $A$
 is context free and $B$ is regular, than $A/B$ is context free.
 
-TODO
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+		\item Given that $A/B$ is context free.
+		\item Given that $wx \in A$ for some $x \in B$.
+		\item Then $B$ is contained in the language $A$.
+		\item Therefore, $B$ is context free. \qedhere
+	\end{enumerate}
+\end{proof}
 
 \section{Exercise 2.26}
 
@@ -109,7 +184,23 @@ Show that, if $G$ is a CFG in Chomsky normal form, then for any string $w \in
 L(G)$ of length $n \geq 1$, exactly $2n - 1$ steps are required for any
 derivation of $w$.
 
-TODO
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Given that CNF only allows productions of the form $A \rightarrow BC$
+	  and $A \rightarrow a$.
+	  \item If $n = 1$, then the only production required to generate $w$
+	  is of the form $A \rightarrow a$, thus the length is $1 = 2n - 1$.
+	  \item If $n = 2$, then three productions are required, one of
+	  the form $A \rightarrow BC$ and two of the form $A \rightarrow a$, thus the
+	  number of steps in the derivation is $3 = 2n - 1$.
+	  \item If $n > 2$, then we can break $w$ down into units of size 2 or 1 and
+	  combine those units to form the larger derivation, which will have $(2n_i - 1) +
+	  (2n_j - 1) + \ldots + (2n - 1)$ steps.
+	  \item Therefore, the number of steps required to derive $w$ is $2n - 1$.
+	  \qedhere
+	\end{enumerate}
+\end{proof}
 
 \section{Exercise 2.30a}
 
