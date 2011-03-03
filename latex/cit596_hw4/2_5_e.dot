@@ -1,0 +1,16 @@
+digraph G {
+	rankdir=LR;
+	null [shape = plaintext label=""]
+	1 [shape=circle];
+	2 [shape=circle];
+	3 [shape=circle];
+	4 [shape=doublecircle];
+	null -> 1
+	1 -> 2 [label = "&#949;, &#949; &#8594; $"];
+	2 -> 2 [label = "0, &#949; &#8594; 0"];
+	2 -> 2 [label = "1, &#949; &#8594; 1"];
+	2 -> 3 [label = "&#949;, &#949; &#8594; &#949;"];
+	3 -> 3 [label = "0, 0 &#8594; &#949;"];
+	3 -> 3 [label = "1, 1 &#8594; &#949;"];
+	3 -> 4 [label = "&#949;, $ &#8594; &#949;"];
+}

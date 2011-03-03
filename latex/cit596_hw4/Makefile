@@ -2,9 +2,9 @@
 
 all: hw4.pdf
 
-.tex.pdf:
-	pdflatex $*.tex
-	pdflatex $*.tex
+hw4.pdf: hw4.tex 2_5_b.png 2_5_c.png 2_5_e.png
+	pdflatex hw4.tex 
+	pdflatex hw4.tex 
 
 .dot.png:
 	rm -f $@

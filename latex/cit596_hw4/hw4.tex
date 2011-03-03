@@ -33,19 +33,27 @@
 
 \section{Exercise 2.1}
 
-\subsection{Part a}
+Given the following CFG, provide parse trees for the string in each part:
+
+\begin{align*}
+	& E \rightarrow E + T \mid T\\
+	& T \rightarrow T \times F \mid F\\
+	& F \rightarrow (E) \mid a
+\end{align*}
+
+\subsection{Part a: $a$}
 
 \Tree [.E [.T [.F [.a ] ] ] ]
 
-\subsection{Part b}
+\subsection{Part b: $a + a$}
 
 \Tree [.E [ [.E [.T [.F [.a ] ] ] ] [ + ] [.T [.F [.a ] ] ] ] ]
 
-\subsection{Part c}
+\subsection{Part c: $a + a + a$}
 
 \Tree [.E [ [.E [ [.E [.T [.F [.a ] ] ] ] [ + ] [.T [.F [.a ] ] ] ] ] [ + ] [.T [.F [.a ] ] ] ] ]
 
-\subsection{Part d}
+\subsection{Part d : $((a))$}
 
 \Tree [.E [.T [.F [ ( ] [.E [.T [.F [ ( ] [.E [.T [.F [.a ] ] ] ] [ ) ] ] ] ] [
 ) ] ] ] ]
@@ -86,31 +94,60 @@ w = w^R \text{, that is} w \text{is a palindrome} \}$.
 
 \section{Exercise 2.5b}
 
-Give a formal description and state diagram for the language describe by
+Give an informal description and state diagram for the language describe by
 Exercise 2.4b.
 
-TODO
+\begin{figure}[h!]
+	\centering
+	\includegraphics[height=1.0in]{2_5_b.png}
+	\caption{PDA for Exercise 2.5b}
+\end{figure}
+
+\pagebreak
 
 \section{Exercise 2.5c}
 
-Give a formal description and state diagram for the language describe by
+Give an informal description and state diagram for the language describe by
 Exercise 2.4c.
 
-TODO
+\begin{figure}[h!]
+	\centering
+	\includegraphics[height=2.0in]{2_5_c.png}
+	\caption{PDA for Exercise 2.5c}
+\end{figure}
 
 \section{Exercise 2.5e}
 
-Give a formal description and state diagram for the language describe by
+Give an informal description and state diagram for the language describe by
 Exercise 2.4e.
 
-TODO
+\begin{figure}[h!]
+	\centering
+	\includegraphics[height=1.5in]{2_5_e.png}
+	\caption{PDA for Exercise 2.5e}
+\end{figure}
 
 \section{Exercise 2.9}
 
 Give a CFG that generates the langage $A = \{ a^i b^j c^k \where i = j \text{
 or } j = k \text{ where } i, j, k \geq 0 \}$. Is this CFG ambiguous?
 
-TODO
+\subsection{Part a}
+
+\begin{align*}
+	& S \rightarrow Wc \mid aX\\
+	& W \rightarrow aWbY\\
+	& X \rightarrow bXcZ\\
+	& Y \rightarrow W \mid \epsilon\\
+	& Z \rightarrow X \mid \epsilon
+\end{align*}
+
+\subsection{Part b}
+
+No, this CFG is not ambiguous because the leftmost derivation of any string
+only generates one parse tree. The productions progress linearally and the only
+loops in the CFG always loop back to the same location. There is never an option
+for a loop to have a choice of where to return to.
 
 \section{Exercise 2.13}
 
