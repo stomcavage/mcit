@@ -60,7 +60,38 @@ Given the following CFG, provide parse trees for the string in each part:
 
 \section{Exercise 2.2}
 
-TODO
+\subsection{Part a}
+
+Use the languages $A = \{ a^m b^n c^n \where m, n \geq 0 \}$ and $B = \{ a^n b^n
+c^m \where m, n \geq 0 \}$ together with Example 2.36 from Sipser to show the
+class of context-free languages is not closed under intersection.
+
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Assume the class of context-free languages is closed under
+	  intersection.
+	  \item Given that $A$ and $B$ are context-free languages.
+	  \item The intersection of $A$ and $B$ is the language $C = \{ a^i b^i c^i 
+	  \where i \geq 0\}$. 
+	  \item By Example 2.36, $C$ is not a context-free language.
+	  \item Thus, the intersection of $A$ and $B$ is not a context-free language.
+	  \item Therefore, the class of context-free languages is not closed under
+	  intersection. \qedhere
+	\end{enumerate}
+\end{proof}
+
+\subsection{Part b}
+
+Use Part (a) and DeMorgan's law to show that the class of context-free languages
+is not closed under complementation.
+
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item TODO
+	\end{enumerate}
+\end{proof}
 
 \section{Exercise 2.4b}
 
@@ -102,8 +133,6 @@ Exercise 2.4b.
 	\includegraphics[height=1.0in]{2_5_b.png}
 	\caption{PDA for Exercise 2.5b}
 \end{figure}
-
-\pagebreak
 
 \section{Exercise 2.5c}
 
@@ -160,7 +189,11 @@ number of zeros after the hash mark is twice the number of zeros before the hash
 
 \subsection{Part b}
 
-TODO
+$L(G)$ is not regular because it contains two recursive rules. $T$ is formed
+from either a hash mark or from some combination of 0 and $T$. Likewise, $U$ is
+formed from either a hash mark or from some combination of 0 and $U$. These
+structures cannot be described by regular expressions. Since regular languages
+are described by regular expressions, the language $L(G)$ is not regular.
 
 \section{Exercise 2.14}
 
@@ -203,15 +236,15 @@ Convert the following CFG to Chomsky Normal Form:
 \section{Exercise 2.20}
 
 Let $A/B = \{ w | wx \in A \text{ for some } x \text{ in } B$. Show that, if $A$
-is context free and $B$ is regular, than $A/B$ is context free.
+is context-free and $B$ is regular, than $A/B$ is context-free.
 
 \begin{proof}
 	\mbox{}
 	\begin{enumerate}
-		\item Given that $A/B$ is context free.
+		\item Given that $A/B$ is context-free.
 		\item Given that $wx \in A$ for some $x \in B$.
 		\item Then $B$ is contained in the language $A$.
-		\item Therefore, $B$ is context free. \qedhere
+		\item Therefore, $B$ is context-free. \qedhere
 	\end{enumerate}
 \end{proof}
 
@@ -238,12 +271,5 @@ derivation of $w$.
 	  \qedhere
 	\end{enumerate}
 \end{proof}
-
-\section{Exercise 2.30a}
-
-Use the pumping lemma to show the langauge $\{ 0^n 1^n 0^n 1^n \where n \geq 0
-\}$ is not context free.
-
-TODO
 
 \end{document}
