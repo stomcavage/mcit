@@ -36,14 +36,43 @@
 Let $B$ be the language of all palindromes over $\{0, 1\}$ containing an equal
 number of $0$s and $1$s. Show that $B$ is not context free.
 
-TODO
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Given $\Sigma = \{ 0, 1 \}$.
+	  \item Assume that $B = \{ ab | a, b \in \Sigma^\star \text{ and } b = a^R
+	  \text{ and the count of 0s in } w = \text{ the count of 1s in } w \}$ is
+	  context free.
+	  \item Let $p$ be the pumping length of $B$.
+	  \item Let $s = w^pw^p = uvxyz$, where $|vy| > 0$ and $|vxy| \leq p$.
+	  \item In the case where $u = \epsilon$, $|z| = p^2 - |vxy|$. Pumping $s$
+	  gives $v^ixy^iz$. Since $|vxy| \leq p$, then $|x| < p$ and $|z| > p$, and the
+	  number of 0s and 1s in $a$ and $b$ are not equal.
+	  \item In the case where $z = \epsilon$, pumping $s$ gives a string which is
+	  not valid because of similar arguments in the previous case.
+	  \item Therefore, $s$ cannot be pumped, which means that $B$ is not context
+	  free. \qedhere
+	\end{enumerate}
+\end{proof}
 
 \section{Exercise 2.36}
 
-Give and example of a language that is not context free but that acts like a CFL
+Give an example of a language that is not context free but that acts like a CFL
 in the pumping lemma. Prove that your example works. 
 
-TODO
+Consider the language $F = \{a^i b^j c^k \where i, j, k \geq 0 \text{ and if }
+i = 1 \text{ then } j = k\}$. It is not a CFL because it is not a regular
+language (see Exercise 1.54). But it can be pumped like a CFL in the case where
+$i > 1$. 
+
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Let $s = a^i b^j c^k = uvxyz$.
+	  \item If $u = a^i$ and $z = c^k$, then $s$ can be pumped, giving $uv^ixy^iz$,
+	  where $v^ixy^i$ is an expanding series of $b$s. \qedhere
+	\end{enumerate}
+\end{proof}
 
 \section{Exercise 1.54}
 
@@ -53,7 +82,19 @@ i = 1 \text{ then } j = k\}$.
 \subsection{Part a}
 Show that $F$ is not regular.
 
-TODO
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Assume that $F$ is a regular language. Then there must be some pumping
+	  length $p$.
+	  \item Consider the case where $s = a^1 b^p c^p = xyz$. 
+	  \item The character $a^1$ must be contained by $x$. Since $|xy| \leq p$, then
+	  $|y| < |b^p|$, so $z$ contains some portion of $b$ follwed by $c^p$. Pumping
+	  $s$ gives a string where $|a| = 1$, but $|b| \neq |c|$, which is not a valid
+	  string in $F$.
+	  \item Therefore, $F$ is not a regular language. \qedhere
+	\end{enumerate}
+\end{proof}
 
 \subsection{Part b}
 
@@ -61,13 +102,28 @@ Show that $F$ acts like a regular language in the pumping lemma. In other words,
 give a pumping length $p$ and show that $F$ satisfies the three conditions of
 the pumping lemma for this value of $p$.
 
-TODO
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Let $i > 1$ so the constraint that $j = k$ is removed.
+	  \item Let $p = 4$, so the string $w = aabc = xyz$.
+	  \item If $x = \epsilon$, then $aabc = yz$, so $y = aa$. Pumping this gives
+	  $y^2z = aaaabc$, which is still valid in $F$.
+	  \item If $z = \epsilon$, then $aabc = xy$, so $y = c$. Pumping this gives
+	  $xy^2 = aabcc$, which is still valid in $F$.
+	  \item If $|x| > 0$ and $|z| > 0$, then $aabc = xyz$, so $y = b$. Pumping this
+	  gives $xy^2z = aabbc$, which is still valid in $F$.
+	  \item Therefore, $F$ satisfies the pumping lemma when $i > 1$. \qedhere
+	\end{enumerate}
+\end{proof}
 
 \subsection{Part c}
 
 Explain why parts a and b do not contradict the pumping lemma.
 
-TODO
+Parts A and B do not contradict the pumping lemma because $F$ represents two
+types of languages. When $i = 1$, then $F$ is not a regular language and cannot
+be pumped. When $i > 1$, then $F$ is a regular language and can be pumped. 
 
 \section{Exercise 2.40}
 
@@ -75,7 +131,18 @@ Say that a language is prefix-closed if the prefix of any string in the language
 is also in the language. Let $C$ be an infinite, prefix-closed, context-free
 language. Show that $C$ contains an infinite regular subset.
 
-TODO 
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Since $C$ is a CFL, it must be pumpable.
+	  \item Let $p$ be the pumping length. 
+	  \item Let $C = uvxyz$ where $|vy| > 0$ and $|vxy| \leq p$.
+	  \item So for every $i \geq 0$, $uv^ixy^iz$ is in $C$.
+	  \item Since $C$ is prefix-closed, then every substring of $C$ that starts
+	  with the first character of the string is also in $C$.
+	  \item Therefore, the infinite regular language $uv*$ is a subset of $C$. 
+	\end{enumerate}
+\end{proof} 
 
 \section{Exercise 2.44}
 
@@ -83,54 +150,344 @@ If $A$ and $B$ are languages, define $A \diamond B = \{xy \where x \in A \text{
 and } y \in B \text{ and } |x| = |y|\}$. Show that if $A$ and $B$ are regular
 languages, then $A \diamond B$ is a CFL.
 
-TODO 
+To satisfy the condition that $|x| = |y|$, the use of a stack is required when
+building a machine to recognize $A \diamond B$. A stack cannot be used in a DFA
+or NFA, but it can be used in an PDA. Thus, $A \diamond B$ can only be
+recognized by an PDA. By lemma 2.27 in Sipser, if a PDA recognizes a language,
+then that language is a CFL. Thus, $A \diamond B$ is a CFL.
 
 \section{Exercise 3.1d}
 
-TODO 
+Using the TM, $M_2$ from Example 3.7 in Sipser, give the sequence of
+configurations that $M_2$ enters when started on the string 000000. 
+
+\begin{enumerate}
+  \item $q_1 000000$
+  \item $\text{blank } q_2 00000$
+  \item $\text{blank } x q_3 0000$
+  \item $\text{blank } x0 q_4 000$
+  \item $\text{blank } x0x q_3 00$
+  \item $\text{blank } x0x0 q_4 0$
+  \item $\text{blank } x0x0x q_3$
+  \item $\text{blank } x0x0 q_5 x$
+  \item $\text{blank } x0x q_5 0x$
+  \item $\text{blank } x0 q_5 x0x$
+  \item $\text{blank } x q_5 0x0x$
+  \item $\text{blank } q_5 x0x0x$
+  \item $\text{blank } q_2 x0x0x$
+  \item $\text{blank } x q_2 0x0x$
+  \item $\text{blank } xx q_3 x0x$
+  \item $\text{blank } xxx q_3 0x$
+  \item $\text{blank } xxx0 q_4 x$
+  \item $\text{blank } xxx0x q_4$
+  \item $\text{blank } xxx0x q_{reject}$
+\end{enumerate}
 
 \section{Exercise 3.2e}
+Using the TM, $M_1$ from Example 3.9 in Sipser, give the sequence of
+configurations that $M_1$ enters when started on the string $10\#10$. 
 
-TODO 
+\begin{enumerate}
+  \item $q_1 10\#10$
+  \item $x q_3 0\#10$
+  \item $x0 q_3 \#10$
+  \item $x0\# q_5 10$
+  \item $x0 q_6 \#x0$
+  \item $x q_7 0\#x0$
+  \item $q_7 x0\#x0$
+  \item $x q_1 0\#x0$
+  \item $xx q_2 \#x0$
+  \item $xx\# q_4 x0$
+  \item $xx\#x q_4 0$
+  \item $xx\# q_6 xx$
+  \item $xx q_6 \#xx$
+  \item $x q_7 x\#xx$
+  \item $xx q_1 \#xx$
+  \item $xx\# q_8 xx$
+  \item $xx\#x q_8 x$
+  \item $xx\#xx q_8$
+  \item $xx\#xx q_{accept}$
+\end{enumerate}
 
 \section{Exercise 3.9}
 
-TODO 
+\subsection{Part a}
+
+Show that 2-PDAs are more powerful than 1-PDAs.
+
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Given that a $k$-PDA has $k$ stacks, so a 1-PDA is PDA with one stack
+	  which can recognize a CFL.
+	  \item Let $\Sigma = \{0, 1 \}$.
+	  \item The language $B = {a^ib^ic^i \where a, b, c \in \Sigma}$ is not a CFL
+	  and thus cannot recognized by a 1-PDA.
+	  \item However, a 2-PDA can recognize the language $B$, by pushing a symbol
+	  onto both stacks for every $a$ and then popping from one stack for every $b$ and
+	  popping from the other stack for every $c$. If both stacks are empty at the
+	  end of the string, the string is in the language $B$.
+	  \item Therefore, a 2-PDA is more powerful than a 1-PDA. \qedhere
+	\end{enumerate}
+\end{proof}
+
+\subsection{Part b}
+
+Show that 3-PDAs are not more powerful than 2-PDAs.
+
+Since stacks operate by pushing items onto them and then popping items off, they
+lend themselves to CFLs where productions are mirrored across the halves of the
+string. With a 2-PDA, you can go from languages in the form $a^ib^i$ to
+$a^ib^ic^i$. Logically this could be expanded so that a 3-PDA would permit the
+language $a^ib^ic^id^i$, but this language can be expressed by a 2-PDA by
+pushing a symbol a stack while reading $a$, then popping from one stack and
+pushing to the other while reading $b$, and likwise for $c$, then finally
+popping from the stack for $d$. In this way, a 2-PDA is equivalent to a 3-PDA.
 
 \section{Exercise 3.13}
 
-TODO 
+Show that a Turing machine with a stay put instruction instead of a left
+instruction is not equivalent to the usual Turing machine.
+
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Given a Turing machine $M_1$ with a right and a stay put instruction,
+	  assume that $M_1$ is equivalent to a Turing machine, $M2$, with a left and
+	  right instruction.
+	  \item Let $B$ be the language $\{ 0^{2^n} \where n \geq 0 \}$.
+	  \item Example 3.7 in Sipser shows that the machine described by $M_2$ can
+	  recognize the language $B$ by using a method of recursively crossing-off
+	  every other 0 in the string until either no 0s remained, in which case it
+	  accepts the string, or an odd number of 0s greater than 1 remained, in which
+	  case it rejects the string.
+	  \item Since $M_1$ cannot go left, it cannot recursively cross-off a pattern
+	  of 0s in the string. If $M_1$ is to succeed, it must count all 0s in one pass
+	  and then determine if that number is in $2^n$. But determining that
+	  without recursively passing over the string requires a Turing machine that 
+	  is hard-wired to recognize a bounded number of elements in $2^n$, which does
+	  not match the power of $M_2$.
+	  \item The ability for $M_1$ to make a single pass over a string and write and
+	  read to a tape matches the ability of a PDA, not a full Turing machine.
+	  \item Therefore, $M_1$ is not equivalent to $M_2$. \qedhere
+	\end{enumerate}
+\end{proof}
 
 \section{Exercise 3.15}
 
-TODO 
+\subsection{Part a}
+
+Show that the collection of decidable languages is closed under union.
+
+\begin{proof}
+		\mbox{}
+		\begin{enumerate}
+		  \item Let $L_1$ and $L_2$ be decidable languages.
+		  \item Let $M_1$ be the machine that decides $L_1$.
+		  \item Let $M_2$ be the machine that decides $L_2$.
+		  \item Build a machine, $M'$, that decides $L_1 \union L_2$.
+		  \item $M'$ runs the string through both $M_1$ and $M_2$. If either $M_1$ or
+		  $M_2$ accepts the string, $M'$ accepts it. If both $M_1$ and $M_2$ reject
+		  the string, then $M'$ rejects it.
+		  \item Therefore, $M'$ is a decider for $L_1 \union L_2$ and the
+		  collection of decidable languages is closed under union. \qedhere
+		\end{enumerate}
+\end{proof}
+
+\subsection{Part b}
+
+Show that the collection of decidable languages is closed under concatenation.
+
+\begin{proof}
+		\mbox{}
+		\begin{enumerate}
+		  \item Let $L_1$ and $L_2$ be decidable languages.
+		  \item Let $M_1$ be the machine that decides $L_1$.
+		  \item Let $M_2$ be the machine that decides $L_2$.
+		  \item Build a machine, $M'$, that decides $L_1 L_2$.
+		  \item $M'$ connects $M_1$ and $M_2$ by bypassing the accept state of $M_1$
+		  and connecting to the start state of $M_2$ if more input exists at the state
+		  where $M_1$ would normally move to the accept state. If $M_2$ reaches the
+		  accept state, then $M'$ accepts the string. If either $M_1$ or $M_2$ reject
+		  the string, then $M'$ rejects the string.
+		  \item Therefore, $M'$ is a decider for $L_1 L_2$ and the
+		  collection of decidable languages is closed under concatenation. \qedhere
+		\end{enumerate}
+\end{proof}
+
+\subsection{Part c}
+
+Show that the collection of decidable languages is closed under star.
+
+\begin{proof}
+		\mbox{}
+		\begin{enumerate}
+		  \item Let $L_1$ be a decidable language.
+		  \item Let $M_1$ be the machine that decides $L_1$.
+		  \item Build a machine, $M'$, that decides $L_1^*$.
+		  \item $M'$ is built by taking $M_1$ and adding a transition back to the
+		  start state if $M_1$ would normally transition to the accept state but more
+		  input exists. If at any time $M_1$ rejects $w$, then $M'$ rejects $w$. If
+		  the string ends on the accept state of $M_1$, then $M'$ accepts the string.
+		  \item Therefore, $M'$ is a decider for $L_1^*$ and the collection
+		  of decidable languages is closed under star. \qedhere
+		\end{enumerate}
+\end{proof}
+
+\subsection{Part d}
+
+Show that the collection of decidable languages is closed under complementation.
+
+\begin{proof}
+		\mbox{}
+		\begin{enumerate}
+		  \item Let $L_1$ be a decidable language.
+		  \item Let $M_1$ be the machine that decides $L_1$.
+		  \item Build a machine, $M'$, that decides $\not{L_1}$.
+		  \item $M'$ is built by running the input through $M_1$. If $M_1$ accepts the
+		  string, $M'$ rejects it. If $M_1$ rejects the string, $M'$ accepts it.
+		  \item Therefore, $M'$ is a decider for $\not{L_1}$ and the collection
+		  of decidable languages is closed under complementation. \qedhere
+		\end{enumerate}
+\end{proof}
+
+\subsection{Part e}
+
+Show that the collection of decidable languages is closed under intersection.
+
+\begin{proof}
+		\mbox{}
+		\begin{enumerate}
+		  \item Let $L_1$ and $L_2$ be decidable languages.
+		  \item Let $M_1$ be the machine that decides $L_1$.
+		  \item Let $M_2$ be the machine that decides $L_2$.
+		  \item Build a machine, $M'$, that decides $L_1 \intersect L_2$.
+		  \item $M'$ runs the string through both $M_1$ and $M_2$. If both $M_1$ and 
+		  $M_2$ accept the string, $M'$ accepts it. If either $M_1$ or $M_2$ rejects
+		  the string, then $M'$ rejects it.
+		  \item Therefore, $M'$ is a decider for $L_1 \intersect L_2$ and the
+		  collection of decidable languages is closed under intersection. \qedhere
+		\end{enumerate}
+\end{proof}
 
 \section{Exercise 3.16b}
 
-TODO 
+Show that the collection of Turing-recognizable languages is closed under
+concatenation.
+
+\begin{proof}
+		\mbox{}
+		\begin{enumerate}
+		  \item Let $L_1$ and $L_2$ be Turing-recognizable languages.
+		  \item Let $M_1$ be the machine that recognizes $L_1$.
+		  \item Let $M_2$ be the machine that recognizes $L_2$.
+		  \item Build a machine, $M'$, that recognizes $L_1 L_2$.
+		  \item $M'$ connects $M_1$ and $M_2$ by bypassing the accept state of $M_1$
+		  and connecting to the start state of $M_2$ if more input exists at the state
+		  where $M_1$ would normally move to the accept state. If $M_2$ reaches the
+		  accept state, then $M'$ accepts the string. If either $M_1$ or $M_2$ reject
+		  the string, then $M'$ rejects the string. If either $M_1$ or $M_2$ do not
+		  halt, then $M'$ does not halt.
+		  \item Therefore, $M'$ is a recognizer for $L_1 L_2$ and the
+		  collection of Turing-recognizable languages is closed under concatenation.
+		  \qedhere
+		\end{enumerate}
+\end{proof}
 
 \section{Exercise 4.15}
 
-TODO 
+Let $A = \{ \langle R \rangle \where R \text{ is a regex describing a language
+containing at least one string } w \text{ that has 111 as a substring } \}$.
+Show that $A$ is decidable.
+
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Since $R$ is a regex, then it is also a regular language.
+	  \item Let $\Sigma$ be the alphabet of $R$.
+	  \item The machine $R$ can be described by a finite string using the alphabet
+	  $\{ \Sigma, *, + \}$. The alphabet does not contain $\epsilon$ since $R$
+	  contains at least the string $111$. The description of $R$ does not contain
+	  any loops or recursion, so it has an equivalent DFA.
+	  \item If the DFA of $\langle R \rangle$ accepts, then $A$ accepts. If the DFA
+	  of $\langle R \rangle$ rejects, then $A$ rejects.
+	  \item Therefore, $\langle R \rangle$ is decidable. \qedhere
+	\end{enumerate}
+\end{proof}
 
 \section{Exercise 4.16}
 
-TODO 
+Prove that $EQ_{DFA}$ is decidable by testing the two DFAs on all strings up to
+a certain size. Calculate a size that works.
+
+This question seems to be asking about specific DFAs, but I can't find any
+reference in the text to those DFAs. 
 
 \section{Exercise 4.19}
 
-TODO 
+Let $S = \{ \rangle M \langle \where M \text{ is a DFA that accepts } w^R
+\text{ whenever it accepts w} \}$. Show that $S$ is decidable.
+
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Create a Turing machine $T$ that takes $\{ \langle M, w \rangle \}$
+	  as its input.
+	  \item The machine $T$ simulates $M$ on the string $w$. Whenever $M$ accepts
+	  $w$, $T$ accepts. Whenever $M$ rejects, then $T$ rejects. 
+	  \item Since $M$ is a DFA, it will always either accept or reject, so $T$ will
+	  always either accept or reject.
+	  \item Therefore, $S$ is decidable. \qedhere
+	\end{enumerate}
+\end{proof}
 
 \section{Exercise 3.3}
 
-TODO -- see note in homework assignment
+Using lambda calculus, create the IMPLIES function.
+
+Since $p \implies q$ is equivalent to $\not{p} \vee q$, the lambda calculus
+function for implies is ite(p, ite(q, T, F), T).
 
 \section{Exercise 2.20a}
 
-TODO -- see note in homework assignment
+Let $A/B = \{ w \where wx \in A \text{ for some } x \in B \}$. Show that, if $A$
+is a Turing machine and $B$ is regular, then $A/B$ is a Turing machine.
+
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item If $A$ is a Turing machine, then it is either Turing recognizable or
+	  Turing decidable. 
+	  \item $B$ will always accept or reject, so since it is at the end of $A$, it
+	  implies that $A$ is Turing decidable.
+	  \item Removing a portion from the end of a Turing decidable language may make
+	  it Turing recognizable, but it will not weaken it further than that. It may
+	  be reduced to a PDA or a DFA, but those are subsets of Turing recognizable
+	  languages.
+	  \item Therefore, $A/B$ is a Turing machine. \qedhere
+	\end{enumerate}
+\end{proof}
 
 \section{Exercise 2.20b}
 
-TODO -- see note in homework assignment
+Let $A/B = \{ w \where wx \in A \text{ for some } x \in B \}$. Show that, if $A$
+is the CFL $S \rightarrow aSb \mid SS \mid \epsilon$ and $B$ is the regular language
+$(\Sigma \Sigma)^+$ where $\Sigma = \{a, b\}$, then $A/B$ is regular.
+
+\begin{proof}
+	\mbox{}
+	\begin{enumerate}
+	  \item Since $B$ must contain at least two characters, then the minimum
+	  length $A$ is the string $ab$, so $A/B$ would be $\epsilon$.
+	  \item $A$ is always built up from two character strings of $a$ and $b$,
+	  whether it is in the form $ab$, $aabb$, $abab$, or $aabbaabb$. 
+	  \item The maximum length of $A/B$ for the examples listed above would be
+	  $\epsilon$, $aa$, $ab$, and $aabbaa$.
+	  \item Since $B$ is in multiples of two characters, it will remove $aa$, $bb$,
+	  or $ab$ from the end of productions of $A$.
+	  \item Therefore, the language $A/B$ can be expressed by the regular
+	  expression $(a^+ b^\star)^\star$. \qedhere
+	\end{enumerate}
+\end{proof}
 
 \end{document}
