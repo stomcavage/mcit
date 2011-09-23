@@ -24,7 +24,7 @@ filePath = "data.txt"
 -- Reads the file containing the tree and de-serializes the tree
 fileToTree :: (Read a) => FilePath -> IO a
 fileToTree fp = do 
---	tree <- readFile fp 
+--    tree <- readFile fp 
     inFile <- openFile fp ReadMode
     tree <- hGetContents inFile
     tree `seq` hClose inFile
